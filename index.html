@@ -266,6 +266,11 @@
       letter-spacing: -0.025em;
     }
 
+    .slot h3.fact-value {
+      color: var(--accent);
+      font-size: clamp(2rem, 3vw, 2.7rem);
+    }
+
     .slot p {
       margin: 12px 0 0;
       color: var(--quiet);
@@ -346,6 +351,9 @@
     }
 
     .contact-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       padding: 10px 14px;
       border: 1px solid rgba(17, 21, 18, 0.25);
       border-radius: 99px;
@@ -353,6 +361,17 @@
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      transition: background-color 160ms ease, color 160ms ease;
+    }
+
+    .contact-badge:hover {
+      background: var(--accent-ink);
+      color: var(--accent);
+    }
+
+    .contact-link {
+      border-bottom: 1px solid rgba(17, 21, 18, 0.35);
+      font-weight: 700;
     }
 
     footer {
@@ -510,11 +529,11 @@
             </div>
           </article>
           <article class="slot">
-            <span class="reserved">Reserved</span>
+            <span class="reserved">Personal detail</span>
             <div>
-              <p class="slot-label">Location</p>
-              <h3>Based in</h3>
-              <p>Location and availability can be added later.</p>
+              <p class="slot-label">Born</p>
+              <h3 class="fact-value">October 2004</h3>
+              <p>Month and year of birth.</p>
             </div>
           </article>
         </div>
@@ -594,9 +613,9 @@
           <div>
             <p class="section-kicker">04 / Contact</p>
             <h2 id="contact-title">Let’s stay connected.</h2>
-            <p class="contact-copy">Email and social links will appear here when they are ready to be shared publicly.</p>
+            <p class="contact-copy">For direct contact, email <a class="contact-link" href="mailto:tairanwu@qq.com">tairanwu@qq.com</a>. Additional public profiles can be added here later.</p>
           </div>
-          <span class="contact-badge">Details forthcoming</span>
+          <a class="contact-badge" href="mailto:tairanwu@qq.com" aria-label="Email Tairan Wu">Email me <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
